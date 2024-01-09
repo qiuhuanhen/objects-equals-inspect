@@ -1,19 +1,23 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
+  <id>csdn-mengqiuyuni</id>
   <name>equals参数类型检查</name>
   <version>1.0</version>
   <vendor email="1005738053@qq.com" url="https://blog.csdn.net/qq_36268103"> </vendor>
 
   <description><![CDATA[
-      检查Objects.equals方法两个入参类型是否一致.<br>
-      <em>判断类型 如果类型不一致会进行提示 ，有效减少在使用Objects.equals(a,b)时 粗心误传参 </em>
+      <li>check java.lang.Objects equals method params type ,if not match,idea will show the error line</li><br>
+      <li>could reduce Objects.equals(a,b) error params type by mistake</li><br>
+      <li>notice:this plugin can only inspect your code,it's just reminder java developers,but don't impact code execution,and never change or fix your code.</li>
     ]]></description>
 
   <change-notes><![CDATA[
-      beta测试版本.<br>
-      <em>首个beta版本</em>
+      <li>github:qiuhuanhen,project name :objects-equals-inspect</li><br>
+      <li>beta version.csdn:孟秋与你</li><br>
+      <li>the first beta version,welcome,update date:2024.01.09</li>
     ]]>
   </change-notes>
+
+  <vendor>qiuhuanhen</vendor>
 
   <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
   <idea-version since-build="173.0"/>
@@ -29,7 +33,7 @@
   <extensions defaultExtensionNs="com.intellij">
     <localInspection
             language="JAVA"
-            displayName="方法提示"
+            displayName="Title"
             groupPath="Java"
             groupBundle="messages.InspectionsBundle"
             groupKey="group.names.probable.bugs"
