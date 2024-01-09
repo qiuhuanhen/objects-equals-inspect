@@ -31,7 +31,6 @@ public class ObjectsEqualsInspection extends LocalInspectionTool {
 
             String methodName = expression.getMethodExpression().getReferenceName();
 
-
             if ("equals".equals(methodName)) {
 
                 PsiExpressionList argumentList = expression.getArgumentList();
@@ -42,7 +41,7 @@ public class ObjectsEqualsInspection extends LocalInspectionTool {
                     PsiType arg1Type = expressions[0].getType();
                     PsiType arg2Type = expressions[1].getType();
 
-                    // 都为空 不做提示  注：即使idea会提示 type不为空 但它完全有可能出现空值，为防止插件报NPE 所以有大量的非空判断
+                    // 都为空 不做提示  注：即使idea会提示 type不为空 ，为防止插件报NPE 还是有大量的非空判断
                     if (null == arg1Type && null == arg2Type) {
                         return;
                     }
@@ -52,7 +51,10 @@ public class ObjectsEqualsInspection extends LocalInspectionTool {
                         holder.registerProblem(expression, "Objects.equals parameters are not of the same type.", ProblemHighlightType.GENERIC_ERROR_OR_WARNING);
                         return;
                     }
-
+                    // 这是忽视某些通用类，框架 用于比较反射class类型的情况
+                    if (arg1Type.getCanonicalText().contains("Class") && arg2Type.getCanonicalText().contains("Class")) {
+                        return;
+                    }
 
                     if (isByte(arg1Type) && isByte(arg2Type)) {
                         return;
