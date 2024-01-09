@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>csdn-mengqiuyuni</id>
-  <name>equals参数类型检查</name>
-  <version>1.0</version>
+  <name>Equals参数类型检查</name>
+  <version>0.1.0</version>
   <vendor email="1005738053@qq.com" url="https://blog.csdn.net/qq_36268103"> </vendor>
 
   <description><![CDATA[
@@ -39,7 +39,7 @@
             groupKey="group.names.probable.bugs"
             enabledByDefault="true"
             level="ERROR"
-            implementationClass="com.qiuhuanhen.ObjectsEqualsInspection"/>
+            implementationClass="com.qiuhuanhen.ObjectsEqualsInspection"/><!--java类所在路径-->
   </extensions>
 
 
