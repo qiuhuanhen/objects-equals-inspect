@@ -1,0 +1,45 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>equals参数类型检查</name>
+  <version>1.0</version>
+  <vendor email="1005738053@qq.com" url="https://blog.csdn.net/qq_36268103"> </vendor>
+
+  <description><![CDATA[
+      检查Objects.equals方法两个入参类型是否一致.<br>
+      <em>判断类型 如果类型不一致会进行提示 ，有效减少在使用Objects.equals(a,b)时 粗心误传参 </em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      beta测试版本.<br>
+      <em>首个beta版本</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.java</depends>
+
+
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <localInspection
+            language="JAVA"
+            displayName="方法提示"
+            groupPath="Java"
+            groupBundle="messages.InspectionsBundle"
+            groupKey="group.names.probable.bugs"
+            enabledByDefault="true"
+            level="ERROR"
+            implementationClass="com.qiuhuanhen.ObjectsEqualsInspection"/>
+  </extensions>
+
+
+
+
+
+</idea-plugin>
