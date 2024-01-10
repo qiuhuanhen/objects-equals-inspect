@@ -51,7 +51,7 @@ public class ObjectsEqualsInspection extends LocalInspectionTool {
                         holder.registerProblem(expression, "Objects.equals parameters are not of the same type.", ProblemHighlightType.GENERIC_ERROR_OR_WARNING);
                         return;
                     }
-                    // 这是忽视某些通用类，框架 用于比较反射class类型的情况
+                    // 这是忽视某些通用类 比较反射class类型的情况
                     if (arg1Type.getCanonicalText().contains("Class") && arg2Type.getCanonicalText().contains("Class")) {
                         return;
                     }
