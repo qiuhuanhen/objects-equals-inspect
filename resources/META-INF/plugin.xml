@@ -5,7 +5,7 @@
   <vendor email="1005738053@qq.com" url="https://blog.csdn.net/qq_36268103"> </vendor>
 
   <description><![CDATA[
-      <li>Equals Inspection aim to reduce the error type of  method params,and improve development efficiency</li><br>
+      Equals Inspection aim to reduce the error params<br>
       <li>could reduce Objects.equals(a,b) error params type by mistake</li><br>
       <li>notice:this plugin can only inspect your code,it's just reminder java developers,but don't impact code execution,and never change or fix your code.</li>
     ]]></description>
