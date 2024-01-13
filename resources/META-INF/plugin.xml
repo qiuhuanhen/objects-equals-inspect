@@ -19,7 +19,7 @@
 
 
   <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
-  <idea-version since-build="192.4" until-build="223.*"/>
+  <idea-version since-build="171.6" until-build="223.*"/>
 
   <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
        on how to target different products -->
