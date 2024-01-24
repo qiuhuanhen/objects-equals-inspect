@@ -48,7 +48,7 @@ public class ObjectsEqualsInspection extends LocalInspectionTool {
 
                     // 其一为空 给出错误提示
                     if (null == arg1Type || null == arg2Type) {
-                        holder.registerProblem(expression, "Objects.equals parameters are not of the same type.", ProblemHighlightType.GENERIC_ERROR_OR_WARNING);
+                        holder.registerProblem(expression, "Parameters type might not match", ProblemHighlightType.GENERIC_ERROR_OR_WARNING);
                         return;
                     }
                     // 这是忽视某些通用类 比较反射class类型的情况
@@ -84,7 +84,7 @@ public class ObjectsEqualsInspection extends LocalInspectionTool {
 
                     if (!arg1Type.equals(arg2Type)) {
 
-                        holder.registerProblem(expression, "Objects.equals parameters are not of the same type.", ProblemHighlightType.GENERIC_ERROR_OR_WARNING);
+                        holder.registerProblem(expression, "Parameters type might not match", ProblemHighlightType.GENERIC_ERROR_OR_WARNING);
                     }
                 }
             }
