@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>csdn-mengqiuyuni</id>
   <name>Equals Inspection</name>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <vendor email="1005738053@qq.com" url="https://blog.csdn.net/qq_36268103"> </vendor>
 
   <description><![CDATA[
@@ -11,7 +11,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      <li>the first beta version,this plugin can recognize unbox auto,the primitive types will be ignored such as int and Integer</li>
+      <li>Simplify error messages,this plugin can recognize unbox auto,the primitive types will be ignored such as int and Integer</li>
     ]]>
   </change-notes>
 
